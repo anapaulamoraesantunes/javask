@@ -1,0 +1,299 @@
+function apresentar(nome) {
+  return `meu nome é ${nome}`;
+}
+
+// Arrow function
+const apresentarArrow = nome => `meu nome é ${nome}`;
+const soma = (num1, num2) => num1 + num2;
+
+//Arrow function com + de 1 linha de instrução
+
+const somaNumerosPequenos = (num1, num2) => {
+  if (num1 || num2 > 10) {
+    return "somente números de 1 a 9"
+  } else {
+    return num1 + num2;
+  }
+}
+
+// Hoisting: arrow function se comporta como expressão
+
+// operador maior ou igual que
+// >=
+// == (comparação implícita)
+
+const numero = 5;
+const texto = "5";
+
+console.log(numero === texto)
+
+//typeof
+console.log(typeof numero)
+console.log(typeof texto)
+
+// == só compara o valor
+// === compara o valor e o tipo de dado
+
+// conversão explícita 
+
+// log -> registro
+
+const minhaVar = true;
+
+// console.log(245)
+// console.log("eu sou um texto")
+// console.log(minhaVar)
+
+// tratamento de erro!
+
+console.error('deu erro!')
+// tipo de dado 
+// booleanos 
+
+// conversão implícita
+const numero = 456;
+const numeroString = Number("456a");
+
+//Number()
+//String()
+console.log(numero + numeroString)
+
+// conversão explícita
+
+console.warn(new Error('oi'))
+// tipo de dado 
+// booleanos 
+
+// conversão implícita
+const numero = 456;
+const numeroString = Number("456a");
+
+//Number()
+//String()
+console.log(numero + numeroString)
+
+// conversão explícita
+
+console.warn(new Error('oi'))
+// declaração de função
+
+function minhaFuncao(param) {
+  // bloco de código
+}
+
+minhaFuncao("param")
+
+// expressão de função
+
+const soma = function(num1, num2) { return num1 + num2 }
+console.log(soma(1, 1))
+
+// diferença principal: HOISTING
+// funções e var são "listadas" no topo do arquivo.
+
+console.log(apresentar())
+
+function apresentar() {
+  return "olá";
+}
+
+console.log(somaOutroExemplo(1, 1))
+const somaOutroExemplo = function(num1, num2) { return num1 + num2 }
+// let x = "";
+// console.log(x);
+// x = "oi";
+
+// DECLARAÇÃO DE FUNÇÃO
+
+// 1) declara a função
+                      //2 -> valor de soma()
+function imprimeTexto(texto) {
+  console.log(texto)
+}
+
+// 2) executa a função (1 ou + vezes)
+
+imprimeTexto(soma());
+// imprimeTexto("outro texto");
+
+// três formas de escrever funções
+
+function soma(){
+  //outros códigos
+  //vários console.log()
+  return 2 + 2;
+}
+
+// console.log(soma())
+// parâmetros de função
+
+              //2       //2
+// function soma(numero1, numero2) {
+//   return numero1 + numero2;
+// }
+
+// console.log(soma(2, 2))
+// console.log(soma(245, 20))
+// console.log(soma(-500, 60))
+
+// parâmetros x argumentos
+
+// ordem dos parâmetros
+
+function nomeIdade(nome, idade) {
+  return `meu nome é ${nome} e minha idade é ${idade}`;
+}
+
+// console.log(nomeIdade(40, "Juliana"))
+
+function soma(numero1, numero2) {
+  return numero1 + numero2;
+}
+
+function multiplica(numero1 = 1, numero2 = 1) {
+  return numero1 * numero2;
+}
+
+                            //9
+console.log(multiplica(soma(4, 5)))
+const nome = "Ju";
+const idade = 2021-1981;
+const cidadeDeNascimento = "São Paulo";
+
+// const apresentacao = "meu nome é " + nome + ", minha idade é " + idade + " e nasci na cidade de " + cidadeDeNascimento;
+
+const apresentacao = `meu nome é ${nome}, minha idade é ${idade} e nasci na cidade de ${cidadeDeNascimento}`;
+
+console.log(apresentacao)
+const idadeMinima = 18;
+const idadeCliente = 16;
+
+if (idadeCliente >= idadeMinima) {
+  console.log("cerveja")
+} else {
+  console.log("suco")
+}
+
+            //condição                    //true     //false
+console.log(idadeCliente >= idadeMinima ? "cerveja" : "suco")
+const x = 0;
+
+//Boolean
+const usuarioLogado = true
+const contaPaga = false
+
+//truthy ou falsy
+//0 -> false
+//1 -> true
+
+console.log(0 == false)//retorna true
+console.log("" == false)//retorna true
+console.log(1 == true)
+
+
+console.log("null e undefinned")
+//undefined
+//null -> vazio ou nada
+
+let minhaVar;
+let varNull = null;
+
+console.log(minhaVar);
+console.log(varNull);
+
+console.log("Quando o undefined está em sua forma pura")
+
+let numero = 3;
+let texto = "Alura";
+
+console.log(typeof numero);
+console.log(typeof texto);
+
+
+console.log(typeof minhaVar);
+console.log(typeof varNull);
+// boolean
+// true -> verdadeiro
+// false -> falso
+
+const primeiroNumero = 5;
+const segundoNumero = 5;
+let cadastroAtivado = true;
+
+//console.log(primeiroNumero === segundoNumero);
+
+const texto1 = "Alura";
+const texto2 = "alura";
+
+console.log(texto1 === texto2)
+// tipo Number
+
+const meuNumero = 3;
+
+const primeiroNumero = 1;
+const segundoNumero = 2;
+
+const operacaoMatematica = primeiroNumero - segundoNumero;
+
+console.log(operacaoMatematica)
+
+// ponto flutuante
+
+const numeroPontoFlutuante = 3.3;
+const pontoFlutuanteSemZero = .5;
+
+const novaOperacao = primeiroNumero / numeroPontoFlutuante;
+
+console.log(novaOperacao)
+
+// NaN -> Not A Number (não é um número)
+
+const alura = "Alura";
+console.log(alura * primeiroNumero)
+const texto1 = "Olá, mundo!";
+const texto2 = 'Olá, mundo!';
+const senha = "senhaSuperSegura456!";
+const StringDeNumeros = "34567";
+
+const citacao = "Meu nome é ";
+const meuNome = "Leonardo";
+
+// concatenação (+)
+
+console.log(citacao + meuNome)
+
+//template string OU template literal
+//var
+
+// var altura = 5;
+// var comprimento = 7;
+
+// area = altura * comprimento;
+// console.log(area)
+// var area;
+
+// let forma = 'retângulo'
+// let altura = 5;
+// let comprimento = 7;
+// let area;
+
+// if (forma === 'retângulo') {
+//   area = altura * comprimento;
+// } else {
+//   area = (altura * comprimento) / 2;
+// }
+
+// console.log(area)
+
+const forma = 'triângulo';
+const altura = 5;
+const comprimento = 7;
+let area;
+
+if (forma === 'quadrado') {
+  area = altura * comprimento;
+} else {
+  area = (altura * comprimento) / 2;
+}
+
+console.log(area)
